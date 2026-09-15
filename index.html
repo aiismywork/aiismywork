@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI IS MY WORK | High-Impact Creative Studio & Visual Portfolio</title>
+  <meta name="description"
+    content="Explore world-class creative design, viral YouTube thumbnails, cinematic movie posters, and cutting-edge AI videos. An interactive portfolio and showcase gallery.">
+
+  <!-- Favicon & Touch Icon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body data-active-tab="home">
+
+  <!-- Ambient Animated Lighting Effects -->
+  <div class="bg-ambient-orb-1"></div>
+  <div class="bg-ambient-orb-2"></div>
+
+  <!-- =========================================================================
+       NAVIGATION BAR (7 Tabs Requested)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <!-- Brand Identity -->
+      <div class="brand-logo" id="brandLogo">
+        <img src="assets/images/logo.png" alt="AI IS MY WORK Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">AI IS MY WORK</span>
+        </div>
+      </div>
+
+      <!-- Desktop Nav - All 7 Required Tabs -->
+      <nav class="nav-links">
+        <button class="nav-item-btn active" data-tab="home">Home</button>
+        <button class="nav-item-btn" data-tab="about">About Us</button>
+        <button class="nav-item-btn" data-tab="social-media">Social Media Posts</button>
+        <button class="nav-item-btn" data-tab="youtube-thumbnails">YouTube Thumbnails</button>
+        <button class="nav-item-btn" data-tab="movie-posters">Movie Posters</button>
+        <button class="nav-item-btn" data-tab="ai-videos">AI Videos</button>
+        <button class="nav-item-btn" data-tab="contact">Contact Us</button>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div class="nav-actions">
+        <button class="btn-upload-nav" id="quickUploadBtn" onclick="window.uploader.open()">
+          <i class="fas fa-cloud-arrow-up"></i>
+          <span>Upload Media</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <ul class="mobile-nav-links">
+      <li><button class="nav-item-btn active" data-tab="home">🏠 Home</button></li>
+      <li><button class="nav-item-btn" data-tab="about">👤 About Us</button></li>
+      <li><button class="nav-item-btn" data-tab="social-media">📱 Social Media Posts</button></li>
+      <li><button class="nav-item-btn" data-tab="youtube-thumbnails">▶️ YouTube Thumbnails</button></li>
+      <li><button class="nav-item-btn" data-tab="movie-posters">🎬 Movie Posters</button></li>
+      <li><button class="nav-item-btn" data-tab="ai-videos">✨ AI Videos</button></li>
+      <li><button class="nav-item-btn" data-tab="contact">✉️ Contact Us</button></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 1.5rem;">
+      <button class="btn-upload-nav" style="width: 100%; justify-content: center;" onclick="window.uploader.open()">
+        <i class="fas fa-cloud-arrow-up"></i>
+        <span>Upload Artwork</span>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         TAB 1: HOME
+         ======================================================================= -->
+    <section class="tab-section active" id="tab-home">
+      <div class="container">
+        <div class="hero-section">
+          <h1 class="hero-title">
+            Graphic Designer | AI Graphic Designer | Creative Designer
+          </h1>
+          <p class="hero-subtitle">
+            Specializing in Social Media Graphics, AI-Powered Ads, YouTube Thumbnails, Movie Posters &amp; Marketing
+            Creatives across multiple industries. Experienced in creating high-impact, engaging visual content that
+            combines creative design, AI tools, and marketing-focused storytelling.
+          </p>
+        </div>
+
+        <!-- Quick Categories Jump Grid -->
+        <div class="home-categories-section">
+
+          <div class="category-jump-grid">
+            <!-- Jump Card 1 -->
+            <div class="category-jump-card" onclick="window.switchTab('social-media')">
+              <div class="category-icon-box">
+                <i class="fas fa-hashtag"></i>
+              </div>
+              <h3 class="category-jump-title">Social Media Posts</h3>
+              <p class="category-jump-desc">Striking promotional campaigns, product launches, carousels, and editorial
+                graphics.</p>
+              <span class="category-jump-link">Open Gallery <i class="fas fa-arrow-right"></i></span>
+            </div>
+
+            <!-- Jump Card 2 -->
+            <div class="category-jump-card" onclick="window.switchTab('youtube-thumbnails')">
+              <div class="category-icon-box">
+                <i class="fab fa-youtube"></i>
+              </div>
+              <h3 class="category-jump-title">YouTube Thumbnails</h3>
+              <p class="category-jump-desc">High-CTR, curiosity-driven thumbnails engineered with psychological lighting
+                and depth.</p>
+              <span class="category-jump-link">Open Gallery <i class="fas fa-arrow-right"></i></span>
+            </div>
+
+            <!-- Jump Card 3 -->
+            <div class="category-jump-card" onclick="window.switchTab('movie-posters')">
+              <div class="category-icon-box">
+                <i class="fas fa-film"></i>
+              </div>
+              <h3 class="category-jump-title">Movie Posters</h3>
+              <p class="category-jump-desc">Theatrical key art, indie film posters, and cinematic fiction covers
+                designed with rich storytelling.</p>
+              <span class="category-jump-link">Open Gallery <i class="fas fa-arrow-right"></i></span>
+            </div>
+
+            <!-- Jump Card 4 -->
+            <div class="category-jump-card" onclick="window.switchTab('ai-videos')">
+              <div class="category-icon-box">
+                <i class="fas fa-wand-magic-sparkles"></i>
+              </div>
+              <h3 class="category-jump-title">AI Videos</h3>
+              <p class="category-jump-desc">Next-generation generative video reels, camera flights, futuristic
+                simulations and motion artwork.</p>
+              <span class="category-jump-link">Open Gallery <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Home Page Bottom Copyright -->
+        <div class="home-bottom-bar">
+          <img src="assets/images/logo.png" alt="AI IS MY WORK Logo" class="home-bottom-logo">
+          <span class="home-bottom-text">&copy; 2026 AI IS MY WORK. All Rights Reserved.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         TAB 2: ABOUT US
+         ======================================================================= -->
+    <section class="tab-section" id="tab-about">
+      <div class="container">
+        <div class="about-hero-grid">
+          <!-- Portrait / Visual Card -->
+          <div class="about-image-wrapper">
+            <div class="about-image-frame">
+              <img src="assets/images/profile.jpg" alt="Creative Designer & AI Specialist">
+            </div>
+            <div class="about-badge-floating">
+              <div class="about-badge-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <div>
+                <div class="about-badge-title">Above 18 Years</div>
+                <div class="about-badge-sub">Graphic Designer &amp; Creative Designer</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="about-content-col">
+            <h2 class="about-lead-title">
+              With 18+ years of experience in Graphic Design, I specialize in creating Social Media Posts, YouTube
+              Thumbnails, Movie Posters, Marketing Creatives, and <span class="text-gradient">AI-powered product
+                advertisements</span> for brands across diverse industries.
+            </h2>
+
+            <p class="about-bio-text">
+              I am highly proficient in Adobe Photoshop and Adobe Illustrator, with basic knowledge of Adobe Premiere
+              Pro. I also leverage modern AI tools and creative workflows to develop engaging, high-impact visual
+              content and innovative advertising concepts.
+            </p>
+
+            <p class="about-bio-text">
+              My design experience spans multiple industries, including Travel, Sports, Fashion, Food Delivery,
+              Cosmetics, Music, Furniture, E-commerce, OTT, Media, and Entertainment.
+            </p>
+
+            <div class="industry-tags-list">
+              <span class="industry-tag"><i class="fas fa-plane-departure"></i> Travel</span>
+              <span class="industry-tag"><i class="fas fa-futbol"></i> Sports</span>
+              <span class="industry-tag"><i class="fas fa-shirt"></i> Fashion</span>
+              <span class="industry-tag"><i class="fas fa-utensils"></i> Food Delivery</span>
+              <span class="industry-tag"><i class="fas fa-wand-magic-sparkles"></i> Cosmetics</span>
+              <span class="industry-tag"><i class="fas fa-music"></i> Music</span>
+              <span class="industry-tag"><i class="fas fa-couch"></i> Furniture</span>
+              <span class="industry-tag"><i class="fas fa-cart-shopping"></i> E-Commerce</span>
+              <span class="industry-tag"><i class="fas fa-tv"></i> OTT</span>
+              <span class="industry-tag"><i class="fas fa-photo-film"></i> Media</span>
+              <span class="industry-tag"><i class="fas fa-clapperboard"></i> Entertainment</span>
+            </div>
+
+            <p class="about-bio-text">
+              I combine strong visual design skills with AI-powered creativity to create content that is visually
+              compelling, brand-focused, and designed to capture audience attention.
+            </p>
+
+            <!-- AI Tools Box -->
+            <div class="about-feature-box">
+              <h3 class="about-box-title">👉 Experienced with AI tools like</h3>
+              <ul class="about-feature-list">
+                <li><span class="bullet-arrow">⏩</span> <strong>ChatGPT</strong></li>
+                <li><span class="bullet-arrow">⏩</span> <strong>Gemini</strong></li>
+                <li><span class="bullet-arrow">⏩</span> <strong>Google Flow</strong></li>
+                <li><span class="bullet-arrow">⏩</span> <strong>Adobe Photoshop &amp; Illustrator</strong></li>
+                <li><span class="bullet-arrow">⏩</span> <strong>Basic Knowledge of Adobe Premiere</strong></li>
+              </ul>
+            </div>
+
+            <!-- YouTube Channel Link Callout -->
+            <div class="about-youtube-callout">
+              <div class="youtube-callout-header">
+                <div class="yt-icon-circle">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div>
+                  <h3 class="yt-callout-title">👉 Created AI PORTFOLIO ADS in YOUTUBE CHANNEL :-</h3>
+                  <a href="https://www.youtube.com/@aiismywork" target="_blank" rel="noopener noreferrer"
+                    class="yt-channel-link">
+                    <span>https://www.youtube.com/@aiismywork</span>
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- What I Create Box -->
+            <div class="about-feature-box">
+              <h3 class="about-box-title">👉 What I Create:</h3>
+              <ul class="about-feature-list create-grid">
+                <li><span class="bullet-arrow">⏩</span> <span>UGC Ads &amp; Tv Commercial Videos</span></li>
+                <li><span class="bullet-arrow">⏩</span> <span>AI Short Films &amp; Storytelling Videos</span></li>
+                <li><span class="bullet-arrow">⏩</span> <span>YouTube Thumbnails</span></li>
+                <li><span class="bullet-arrow">⏩</span> <span>Social Media Creatives</span></li>
+                <li><span class="bullet-arrow">⏩</span> <span>Digital Ads, Banners &amp; Marketing Creatives</span></li>
+                <li><span class="bullet-arrow">⏩</span> <span>Movie Poster</span></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         TAB 3: SOCIAL MEDIA POSTS
+         ======================================================================= -->
+    <section class="tab-section" id="tab-social-media">
+      <div class="container">
+        <!-- Gallery Grid -->
+        <div class="gallery-grid gallery-grid-social" id="grid-social-media">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         TAB 4: YOUTUBE THUMBNAILS
+         ======================================================================= -->
+    <section class="tab-section" id="tab-youtube-thumbnails">
+      <div class="container">
+        <!-- Gallery Grid (16:9 Widescreen) -->
+        <div class="gallery-grid gallery-grid-youtube" id="grid-youtube-thumbnails">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         TAB 5: MOVIE POSTERS
+         ======================================================================= -->
+    <section class="tab-section" id="tab-movie-posters">
+      <div class="container">
+        <!-- Gallery Grid (2:3 Cinematic Ratio) -->
+        <div class="gallery-grid gallery-grid-posters" id="grid-movie-posters">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         TAB 6: AI VIDEOS
+         ======================================================================= -->
+    <section class="tab-section" id="tab-ai-videos">
+      <div class="container">
+        <!-- Gallery Grid for Videos -->
+        <div class="gallery-grid gallery-grid-videos" id="grid-ai-videos">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         TAB 7: CONTACT US
+         ======================================================================= -->
+    <section class="tab-section" id="tab-contact">
+      <div class="container">
+        <div class="section-header-center">
+          <h1 class="section-title">Get In Touch</h1>
+        </div>
+
+        <div class="contact-cards-grid">
+          <!-- Card 1: Direct Email -->
+          <div class="contact-feature-card">
+            <div class="contact-icon-bubble">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="contact-feature-title">Direct Email</h3>
+            <a href="mailto:navinthampywork@gmail.com" class="contact-email-link"
+              title="Click to email navinthampywork@gmail.com">
+              <i class="fas fa-envelope"></i>
+              <span>navinthampywork@gmail.com</span>
+            </a>
+          </div>
+
+          <!-- Card 2: Portfolio (Only Behance & LinkedIn) -->
+          <div class="contact-feature-card">
+            <div class="contact-icon-bubble" style="color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.35);">
+              <i class="fas fa-link"></i>
+            </div>
+            <h3 class="contact-feature-title">Portfolio</h3>
+
+            <div class="contact-professional-links">
+              <a href="https://www.behance.net/navinportfolio" target="_blank" rel="noopener noreferrer"
+                class="professional-link-btn behance-btn" title="View Behance Portfolio (@navinportfolio)">
+                <i class="fab fa-behance"></i>
+                <span>Behance Portfolio</span>
+                <i class="fas fa-arrow-up-right-from-square link-arrow-icon"></i>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                class="professional-link-btn linkedin-btn" title="Connect on LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+                <i class="fas fa-arrow-up-right-from-square link-arrow-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       UNIVERSAL POPUP VIDEO / MEDIA WINDOW
+       ========================================================================= -->
+  <div class="modal-backdrop" id="lightboxModal" role="dialog" aria-modal="true">
+    <div class="lightbox-window">
+      <!-- Floating Close Button -->
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" title="Close (Esc)" aria-label="Close Video Window">
+        ✕
+      </button>
+
+      <!-- Lightbox Media Stage (Video or Image) -->
+      <div class="lightbox-stage-container">
+        <div class="lightbox-media-wrapper" id="lightboxMediaContainer">
+          <!-- Dynamically inserted <video> or <img> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       UPLOAD MEDIA MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="uploadModal" role="dialog" aria-modal="true">
+    <div class="upload-modal-window">
+      <!-- Header -->
+      <div class="upload-modal-header">
+        <h2 class="upload-modal-title">Publish New Artwork</h2>
+        <button class="modal-close-btn" id="uploadModalCloseBtn" title="Close" aria-label="Close Dialog">
+          ✕
+        </button>
+      </div>
+
+      <!-- Drag & Drop Zone -->
+      <div class="upload-dropzone" id="uploadDropzone">
+        <input type="file" id="mediaFileInput" multiple accept="image/*,video/mp4,video/webm,video/quicktime"
+          style="display: none;">
+        <div class="dropzone-icon">
+          <i class="fas fa-cloud-arrow-up"></i>
+        </div>
+        <div class="dropzone-text-main">Click or Drag & Drop Multiple Videos / Images</div>
+        <div class="dropzone-text-sub">Select up to 10+ files at once (MP4, WEBM, PNG, JPG)</div>
+      </div>
+
+      <!-- Live Media Preview Box -->
+      <div class="upload-preview-container" id="uploadPreviewContainer">
+        <!-- Live preview injected here -->
+      </div>
+
+      <!-- Metadata Form -->
+      <form id="uploadForm">
+        <div class="upload-form-grid" style="grid-template-columns: 1fr;">
+          <div class="form-group upload-form-full">
+            <label class="form-label" for="uploadCategory">
+              <i class="fas fa-layer-group"></i> Upload to Tab *
+            </label>
+            <select id="uploadCategory" class="form-select" required>
+              <option value="social-media">Social Media Posts</option>
+              <option value="youtube-thumbnails">YouTube Thumbnails</option>
+              <option value="movie-posters">Movie Posters</option>
+              <option value="ai-videos">AI Videos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="upload-actions-row">
+          <button type="submit" class="upload-submit-btn">
+            <i class="fas fa-check-circle"></i> Save to Portfolio
+          </button>
+          <button type="button" class="upload-discard-btn" id="uploadDiscardBtn" style="display: none;">
+            <i class="fas fa-trash-can"></i> Discard Video / File
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Alert -->
+  <div class="toast-notification" id="toastNotification">
+    <span class="toast-icon" id="toastIcon">✨</span>
+    <span id="toastText">Action completed successfully</span>
+  </div>
+
+  <!-- Footer (All Pages) -->
+  <footer class="site-footer">
+    <div class="home-bottom-bar" onclick="window.switchTab('home')" style="cursor: pointer;"
+      title="AI IS MY WORK - Back to Home">
+      <img src="assets/images/logo.png" alt="AI IS MY WORK Logo" class="home-bottom-logo">
+      <span class="home-bottom-text">&copy; 2026 AI IS MY WORK. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Scripts in dependency order -->
+  <script src="js/gallery-data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
